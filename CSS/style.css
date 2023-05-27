@@ -1,0 +1,23 @@
+body > div {
+    height: calc(100vh - 80px);
+}
+
+header {
+    height: 80px;
+    background-color: rgba(200, 0, 0, 0.8);
+    color: #fff;
+}
+
+.my-card {
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 50%;
+    height: 50%;
+}
+
+p {
+    font-size: 40px;
+}
+
+.my-card span {
+    font-size: 30px;
+}

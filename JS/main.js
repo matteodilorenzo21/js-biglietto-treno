@@ -23,6 +23,10 @@ console.log('JS OK!')
 // #0
 const priceResult = document.getElementById('result');
 console.log(priceResult);
+const displayDistance = document.getElementById('distance');
+console.log(displayDistance);
+const displayAge = document.getElementById('age');
+console.log(displayAge);
 
 // #1 #2
 const userDistance = parseInt(prompt('Inserire la distanza in chilometri', '525'));
@@ -32,13 +36,14 @@ console.log(userDistance, typeof userDistance);
 console.log(userAge, typeof userAge);
 
 // ! VALIDATION ! //
-if(isNaN(userDistance) || isNaN(userAge) || userDistance === 0 || userAge === 0) {
+if(isNaN(userDistance) || isNaN(userAge) || userDistance < 1 || userAge < 1) {
     alert('Inserisci dei valori validi');
     alert('Ricarica la pagina');
-}
-
-// #3
-let ticketPrice = (userDistance * 0.21);
+    displayDistance.innerText = 'Distanza non valida !';
+    displayAge.innerText = 'Età non valida !';
+    priceResult.innerText = 'Prezzo non calcolabile !'
+} else {
+    let ticketPrice = (userDistance * 0.21);
 console.log(ticketPrice);
 
 // #4
@@ -54,3 +59,9 @@ console.log(ticketDiscount);
 
 // #5
 priceResult.innerText = '€' + ticketDiscount.toFixed(2);
+displayDistance.innerText = userDistance + ' ' + 'Km'
+displayAge.innerText = userAge + ' ' + 'Anni'
+}
+
+document.body.style.backgroundImage = "url(img/background.jpg)";
+document.body.style.backgroundSize = "cover";

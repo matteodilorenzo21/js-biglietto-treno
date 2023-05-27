@@ -14,7 +14,7 @@
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.css' integrity='sha512-0yYhCyiMB+6XOis4qvWA42kPkKb54+uMaOhbsta6m+aQ7cZOm5hzERPrRkkknlpEdoxVCwYui+yM0jRazpDFuA==' crossorigin='anonymous'/>
 
     <!-- CSS LINK -->
-    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="stylesheet" href="CSS/style.css" type="text/css">
 
     <!-- JS LINK -->
     <script defer src="JS/main.js"></script>
@@ -24,10 +24,18 @@
 </head>
 
 <body>
-    <header>
-        
+    <header class="d-flex justify-content-center align-items-center">
+        <h1 class="text-light"><i class="bi bi-train-freight-front"></i>Train<span class="text-warning">Way</span>.com</h1>
     </header>
-    <p><span id="result"></span></p>
+
+    <div class="d-flex justify-content-center align-items-center">
+        <div class="my-card d-flex flex-column rounded text-light text-start justify-content-center ps-5">
+            <p>DISTANZA:  <span class="text-warning" id="distance"></span></p>
+            <p>ETA':  <span class="text-warning" id="age"></span></p>
+            <p>PREZZO BIGLIETTO:  <span class="text-warning" id="result"></span></p>
+        </div>
+    </div>
+
 </body>
 
 </html>
